@@ -1054,7 +1054,7 @@ MonoBehaviour:
   fuel: {fileID: 1517424734}
   tankPos: {fileID: 240278180}
   FuelPos: {fileID: 80131380}
-  distance: {fileID: 114509835}
+  distanceText: {fileID: 114509835}
 --- !u!4 &399518652
 Transform:
   m_ObjectHideFlags: 0
@@ -1514,6 +1514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectPrefab: {fileID: 1672291955951750, guid: 003f94f93ca81d44abeb0a691d2b9629, type: 3}
   objPosition: {x: 0, y: 0, z: 0}
+  obj: {fileID: 0}
 --- !u!4 &1517424736
 Transform:
   m_ObjectHideFlags: 0

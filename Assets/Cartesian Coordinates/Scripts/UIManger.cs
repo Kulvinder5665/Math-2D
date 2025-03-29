@@ -4,26 +4,52 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UIManger : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     public GameObject tank;
     public GameObject fuel;
 
-    public TextMeshProUGUI tankPos, FuelPos, distance;
+    public TextMeshProUGUI tankPos, FuelPos, distanceText;
     
     private ObjectManager objectManager;
-    // Start is called before the first frame update
+   public  GameObject fuelSpawnObject;
+
     void Start()
     {
-       objectManager = fuel.GetComponent<ObjectManager>();
-        tankPos.text = tank.transform.position + "";
-        FuelPos.text = objectManager.objPosition+ "";
-      //  distance.text= 
-    }
+        // Ensure fuel has the ObjectManager script
+        objectManager = fuel.GetComponent<ObjectManager>();
+        if (objectManager == null)
+        {
+            Debug.LogError("ObjectManager script not found on Fuel!");
+            return;
+        }
 
-    // Update is called once per frame
+        fuelSpawnObject = GameObject.FindGameObjectWithTag("Fuel");
+
+        // Display Positions
+        tankPos.text = "Tank Position: " + tank.transform.position;
+        FuelPos.text = "Fuel Position: " + fuelSpawnObject.transform.position;
+
+        // Calculate Distance
+        
+
+        // Calculate Angle
+        float angle = Mathf.Atan2(
+            fuelSpawnObject.transform.position.y - tank.transform.position.y, 
+            fuelSpawnObject.transform.position.x - tank.transform.position.x
+        ) * Mathf.Rad2Deg - 90;
+
+        // Apply Rotation to Tank
+        tank.transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
     void Update()
     {
-        
+        DitanceCalacution();
+    }
+
+    public float DitanceCalacution(){
+      float calculatedDistance = Vector2.Distance(tank.transform.position, fuelSpawnObject.transform.position);
+        distanceText.text = "Distance: " + calculatedDistance.ToString("F2");
+        return calculatedDistance;
     }
 }
