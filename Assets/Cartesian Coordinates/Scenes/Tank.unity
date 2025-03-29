@@ -1055,6 +1055,7 @@ MonoBehaviour:
   tankPos: {fileID: 240278180}
   FuelPos: {fileID: 80131380}
   distanceText: {fileID: 114509835}
+  FuelAmounttext: {fileID: 868866733}
   fuelSpawnObject: {fileID: 0}
 --- !u!4 &399518652
 Transform:
@@ -1355,7 +1356,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 41, y: -95}
-  m_SizeDelta: {x: 653.6667, y: 375.0174}
+  m_SizeDelta: {x: 653.6667, y: 440.1597}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &642040404
 MonoBehaviour:
@@ -1380,7 +1381,7 @@ MonoBehaviour:
   m_CellSize: {x: 288.47, y: 100}
   m_Spacing: {x: 55.7, y: 0}
   m_Constraint: 2
-  m_ConstraintCount: 3
+  m_ConstraintCount: 4
 --- !u!114 &642040405
 MonoBehaviour:
   m_ObjectHideFlags: 0
