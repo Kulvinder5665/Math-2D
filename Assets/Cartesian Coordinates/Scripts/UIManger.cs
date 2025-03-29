@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public GameObject tank;
     public GameObject fuel;
 
-    public TextMeshProUGUI tankPos, FuelPos, distanceText;
+    public TextMeshProUGUI tankPos, FuelPos, distanceText, FuelAmounttext;
     
     private ObjectManager objectManager;
    public  GameObject fuelSpawnObject;
