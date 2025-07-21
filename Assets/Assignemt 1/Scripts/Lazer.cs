@@ -82,7 +82,7 @@ public class Lazer : MonoBehaviour
     float GetAngle(Vector2 from, Vector2 to)
     {
         Vector2 direction = to - from;
-        return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg ;
     }
 
     void OnTriggerEnter2D(Collider2D other)
