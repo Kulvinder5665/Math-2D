@@ -24,6 +24,8 @@ public class Radial : MonoBehaviour
         // }
 
         // Better way by using magnitude
+
+        // finding the direction 
         Vector2 direction = player.transform.position - this.transform.position;
         float distance = direction.sqrMagnitude;
         float squareOfRadius= radius * radius;
